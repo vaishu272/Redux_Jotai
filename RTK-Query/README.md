@@ -1,16 +1,97 @@
-# React + Vite
+# 🧠 Redux Toolkit Query Demo – Posts App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application demonstrating **Redux Toolkit Query (RTK Query)** for fetching, caching, and mutating API data.
 
-Currently, two official plugins are available:
+This project shows how to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetch all posts
+- Fetch a single post by ID
+- Add a new post using mutation
+- Handle loading & error states
+- Show optimistic UI preview
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📡 Fetch posts using RTK Query
+- 🔎 Fetch post by ID dynamically
+- ➕ Add new post with mutation
+- ⚡ Automatic caching & refetching
+- 🧠 Simplified async logic (no thunk needed)
+- 🎨 Clean UI using Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- React.js
+- Redux Toolkit
+- RTK Query
+- Tailwind CSS
+- JSONPlaceholder API
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+│
+├── redux/
+│   ├── api.js            # RTK Query API slice
+│   └── store.js          # Redux store setup
+│
+├── App.jsx               # Main UI
+└── main.jsx              # React entry point
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/rtk-query-demo.git
+```
+
+Move into project folder:
+
+```bash
+cd rtk-query-demo
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🧠 How RTK Query Works Here
+
+1. API slice defines endpoints (`getPosts`, `getPostById`, `addPost`)
+2. RTK Query auto-generates hooks
+3. Components call hooks directly
+4. Redux store manages caching automatically
+5. UI updates instantly on state change
+
+---
+
+## 🎯 Learning Outcomes
+
+This project demonstrates:
+
+- How RTK Query replaces manual async logic
+- How caching works automatically
+- How to use mutations safely with `.unwrap()`
+- How to structure Redux Toolkit projects
+- How to manage API state without reducers
